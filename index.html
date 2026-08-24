@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch ? window.fetch.bind(window) : undefined;
+          var _currentFetch = originalFetch;
+          try {
+            Object.defineProperty(window, 'fetch', {
+              get: function() { return _currentFetch || originalFetch; },
+              set: function(fn) { _currentFetch = fn; },
+              configurable: true,
+              enumerable: true
+            });
+          } catch (e1) {
+            try {
+              Object.defineProperty(Window.prototype, 'fetch', {
+                get: function() { return _currentFetch || originalFetch; },
+                set: function(fn) { _currentFetch = fn; },
+                configurable: true,
+                enumerable: true
+              });
+            } catch (e2) {}
+          }
+        } catch (err) {}
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3 Colinas Odontologia | Precisão Digital, Alinhadores & Cuidado de Alto Padrão</title>
+    <meta name="description" content="Clínica odontológica premium especializada em ortodontia digital, alinhadores transparentes, scanner 3D iTero e reabilitação estética. Sob direção da Dra. Elisa G. da Rocha." />
+    <meta property="og:title" content="3 Colinas Odontologia | Excelência e Cuidado Humanizado" />
+    <meta property="og:description" content="Tecnologia 3D, precisão biológica e conforto absoluto. Agende sua avaliação personalizada." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1A1A1A" />
+    
+    <!-- 3 Colinas Brand Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23FFFFFF' stroke='%2348C0BA' stroke-width='4'/%3E%3Cpath d='M 20 42 A 34 34 0 0 1 80 42' stroke='%2348C0BA' stroke-width='3' fill='none'/%3E%3Cpath d='M 20 58 A 34 34 0 0 0 80 58' stroke='%2348C0BA' stroke-width='3' fill='none'/%3E%3Ctext x='50' y='54' font-family='Georgia, serif' font-size='15' font-weight='bold' fill='%232B2B2B' text-anchor='middle'%3E3 Colinas%3C/text%3E%3Ctext x='50' y='64' font-family='sans-serif' font-size='5.5' font-weight='bold' letter-spacing='1.5' fill='%2348C0BA' text-anchor='middle'%3EODONTOLOGIA%3C/text%3E%3C/svg%3E" />
+    
+    <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Plus Jakarta Sans (Modern Architectural Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#FAF9F5] text-[#1D2423] antialiased selection:bg-[#2A4B45] selection:text-[#FAF9F5]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

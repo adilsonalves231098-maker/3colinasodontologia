@@ -1,0 +1,6 @@
+{
+  "name": "3 Colinas Odontologia",
+  "description": "Experiência digital da clínica 3 Colinas Odontologia. Ortodontia digital, alinhadores transparentes, scanner 3D iTero e estética dental de alto padrão sob direção da Dra. Elisa G. da Rocha.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

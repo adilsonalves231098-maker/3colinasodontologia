@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: Georgia, 'Cormorant Garamond', serif;
+    --font-sans: 'Plus Jakarta Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --color-canvas: #FDFCFB;
+    --color-stone: #E5E2DD;
+    --color-stone-dark: #D1CDC7;
+    --color-ink: #1A1A1A;
+    --color-taupe: #8C7E6A;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #1A1A1A;
+    background-color: #FDFCFB;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Editorial typography & accents */
+.font-editorial-serif {
+  font-family: Georgia, 'Cormorant Garamond', serif;
+}
+
+.tracking-editorial-wide {
+  letter-spacing: 0.25em;
+}
+
+.tracking-editorial-ultra {
+  letter-spacing: 0.35em;
+}
+
+/* Architectural frames and lines */
+.editorial-border {
+  border-color: rgba(26, 26, 26, 0.12);
+}
+
+.editorial-divider {
+  height: 1px;
+  background-color: #8C7E6A;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFCFB;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1CDC7;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8C7E6A;
+}
+
+
